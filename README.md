@@ -1,5 +1,51 @@
 # Linux-system-Notes
 
+
+### System Monitoring and Resource Management
+- **top**: Displays real-time system processes and resource usage.
+- **htop**: Enhanced version of top with a better interface (requires installation).
+- **free -h**: Shows memory usage statistics in human-readable format.
+- **df -h**: Displays disk space usage for all mounted filesystems.
+- **du -h /path**: Shows disk usage of files and directories.
+- **iostat**: Reports CPU and I/O statistics (part of `sysstat`).
+- **mpstat**: Displays CPU usage per processor (part of `sysstat`).
+- **vmstat -s**: Reports memory statistics.
+- **lscpu**: Displays detailed CPU architecture information.
+- **lsblk**: Lists all block devices and their mount points.
+
+### Process Management
+- **ps aux**: Shows detailed information about running processes.
+- **pstree**: Displays processes in a tree format.
+- **pgrep -l <process_name>**: Finds processes by name.
+- **pidstat**: Reports statistics for Linux tasks.
+
+### Disk Management
+- **blkid**: Displays information about block devices.
+- **fdisk -l**: Lists all partitions on all disks.
+- **mkfs.ext4 /dev/sdX**: Formats a partition with the ext4 filesystem.
+- **e2fsck /dev/sdX**: Checks a filesystem for errors.
+
+### Network Management and Troubleshooting
+- **ping <hostname>**: Checks network connectivity to a host.
+- **traceroute <hostname>**: Traces the route packets take to a network host.
+- **ifconfig**: Displays network interface information (deprecated; use `ip`).
+- **ip a**: Shows all IP addresses and interfaces.
+- **netstat -tuln**: Displays network connections and listening ports.
+- **ss -tuln**: Similar to netstat but faster and more informative.
+- **dig <domain>**: Performs DNS lookups.
+- **whois <domain>**: Retrieves domain registration information.
+
+### System Information and Hardware
+- **dmidecode**: Displays BIOS and hardware information.
+- **lsusb**: Lists USB devices connected to the system.
+- **lspci**: Lists PCI devices connected to the system.
+- **dmesg**: Displays kernel ring buffer messages.
+
+### User and Group Management
+- **useradd -m <username>**: Adds a new user with a home directory.
+
+### Swap Memory
+
 This script creates and configures a swap file on your system. Here’s a step-by-step explanation of each part and instructions for running it:
 
 ```sh
@@ -95,3 +141,5 @@ echo "Swap memory size increased to ${SWAP_SIZE_GB}GB."
 ### After Running
 
 Once the script finishes, you’ll see the swap status and total memory available. The swap file is now set to 6 GB, and it will be automatically enabled on reboot.
+
+
